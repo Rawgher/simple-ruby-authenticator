@@ -21,6 +21,15 @@ username = gets.chomp
 print "Password: "
 password = gets.chomp
 
+users.each do |user|
+    if user[:username] == username && user[:password] == password
+        puts user
+
+    else 
+        puts "Credentials were not correct"
+end
+
+
 puts "Press n to quit or any other key to continue: "
 input = gets.chomp.downcase
 
